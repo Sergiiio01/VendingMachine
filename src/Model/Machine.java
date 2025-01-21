@@ -62,6 +62,10 @@ public class Machine {
             if(this.balance >= this.items[row][column].getPrice()){
                 this.items[row][column].reduceStock(1);
                 this.balance -= this.items[row][column].getPrice();
+                if(this.items[row][column].getStock() == 0){
+                    this.items[row][column] = null;
+                }
+
                 return true;
             }
             else{

@@ -10,7 +10,7 @@ public class MachineView{
     public void start(Machine machine){
         do {
             int option = 0;
-            System.out.println("-----Welcome-----");
+            System.out.print("\n\n\n\n-----Welcome-----\n");
             System.out.println("Here is the content of the machine: ");
             System.out.println(machine.showMachine());
             System.out.println(machine.showBalance());
@@ -45,6 +45,7 @@ public class MachineView{
                     break;
                 case 4:
                     System.out.println("Bye!!!");
+                    return;
                 default:
                     System.out.println("Wrong option. Try again.");
             }
