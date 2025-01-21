@@ -5,10 +5,16 @@ import Model.Machine;
 
 import java.util.Scanner;
 
+/**
+ * Class for the admin view
+ */
 public class MachineAdminView {
-
+    /**
+     * Method for starting the admin view
+     * @param machine
+     */
     public void start(Machine machine){
-
+        // Admin menu, will be executed until the user exits
         do {
             int option = 0;
             int row = 0;

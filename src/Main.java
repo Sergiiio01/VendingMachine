@@ -6,7 +6,14 @@ import View.MachineAdminView;
 import javax.swing.text.View;
 import java.util.Scanner;
 
+/**
+ * Main class of the project
+ */
 public class Main {
+    /**
+     * Main method of the project
+     * @param args
+     */
     public static void main(String[] args) {
         Machine vending = new Machine();
         Scanner sc = new Scanner(System.in);

@@ -4,9 +4,15 @@ import Model.Machine;
 
 import java.util.Scanner;
 
+/**
+ * Class for the client's view
+ */
 public class MachineView{
 
-
+    /**
+     * Method that starts the client`s menu
+     * @param machine
+     */
     public void start(Machine machine){
         do {
             int option = 0;
