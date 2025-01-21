@@ -1,9 +1,8 @@
-import Model.Item;
-import Model.Machine;
-import View.MachineView;
-import View.MachineAdminView;
+import Implementation.Item;
+import Implementation.Machine;
+import Implementation.MachineView;
+import Implementation.MachineAdminView;
 
-import javax.swing.text.View;
 import java.util.Scanner;
 
 /**

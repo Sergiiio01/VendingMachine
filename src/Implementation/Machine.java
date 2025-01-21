@@ -1,4 +1,4 @@
-package Model;
+package Implementation;
 
 /**
  * Class for the vending machine

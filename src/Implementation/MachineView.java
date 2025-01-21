@@ -1,6 +1,4 @@
-package View;
-
-import Model.Machine;
+package Implementation;
 
 import java.util.Scanner;
 
