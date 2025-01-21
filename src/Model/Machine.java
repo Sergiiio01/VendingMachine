@@ -16,10 +16,17 @@ public class Machine {
         return items;
     }
 
-    public void addNewItem(Item item, int row, int column){
+    public boolean addNewItem(Item item, int row, int column){
         if(row<this.ROWS && column<this.COLUMNS) {
-            this.items[row][column] = item;
+            if(this.items[row][column] == null) {
+                this.items[row][column] = item;
+                return true;
+            }
+            else{
+                return false;
+            }
         }
+        return false;
     }
 
     public double getBalance() {
@@ -75,6 +82,10 @@ public class Machine {
         else{
             return false;
         }
+    }
+
+    public void retireItem(int row, int column){
+        this.items[row][column]=null;
     }
 
     public String showBalance(){

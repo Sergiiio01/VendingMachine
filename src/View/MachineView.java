@@ -14,7 +14,7 @@ public class MachineView{
             System.out.println("Here is the content of the machine: ");
             System.out.println(machine.showMachine());
             System.out.println(machine.showBalance());
-            System.out.println("Seleccione una opcion:");
+            System.out.println("Select an option:");
             System.out.println("1. Insert balance");
             System.out.println("2. Buy an Item");
             System.out.println("3. Retire balance");
@@ -28,9 +28,9 @@ public class MachineView{
                     machine.addBalance(amount);
                     break;
                 case 2:
-                    System.out.println("Select the row of the item you want to include: (between 0 and 2).");
+                    System.out.println("Select the row of the item you want to buy: (between 0 and 2).");
                     int row = sc.nextInt();
-                    System.out.println("Select the column of the item you want to include: (between 0 and 2).");
+                    System.out.println("Select the column of the item you want to buy: (between 0 and 2).");
                     int column = sc.nextInt();
                     if(machine.buyItem(row ,column)){
                         System.out.println("Item bought.");
