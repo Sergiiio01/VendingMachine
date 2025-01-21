@@ -28,6 +28,12 @@ public class Machine {
 
     public void addBalance(double balance) {
         this.balance += balance;
+        System.out.println("Balance added");
+    }
+
+    public void retireBalance(){
+        this.balance=0;
+        System.out.println("Balance retired");
     }
 
     public String showMachine(){
@@ -38,7 +44,8 @@ public class Machine {
             for(int j=0; j<this.COLUMNS; j++){
                machine.append("[ ");
                 if(this.items[i][j] != null) {
-                    machine.append(this.items[i][j].getName());
+                    machine.append(this.items[i][j].getName() + " ( " + this.items[i][j].getStock() + " )");
+
                 }
                 else{
                     machine.append("x");
@@ -48,6 +55,26 @@ public class Machine {
             machine.append(")\n");
         }
         return machine.toString();
+    }
+
+    public boolean buyItem(int row, int column){
+        if(this.items[row][column] != null) {
+            if(this.balance >= this.items[row][column].getPrice()){
+                this.items[row][column].reduceStock(1);
+                this.balance -= this.items[row][column].getPrice();
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+
+    public String showBalance(){
+        return "The balance is: " + this.balance;
     }
 
 }
