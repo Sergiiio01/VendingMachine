@@ -39,4 +39,7 @@ public class Item {
     public void addStock(int stock){
         this.stock += stock;
     }
+    public void reduceStock(int stock){
+        this.stock -= stock;
+    }
 }

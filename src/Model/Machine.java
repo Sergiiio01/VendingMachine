@@ -17,15 +17,37 @@ public class Machine {
     }
 
     public void addNewItem(Item item, int row, int column){
-        this.items[row][column]=item;
+        if(row<this.ROWS && column<this.COLUMNS) {
+            this.items[row][column] = item;
+        }
     }
 
     public double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void addBalance(double balance) {
+        this.balance += balance;
+    }
+
+    public String showMachine(){
+        StringBuilder machine= new StringBuilder();
+        for(int i=0; i< this.ROWS; i++){
+
+           machine.append("(");
+            for(int j=0; j<this.COLUMNS; j++){
+               machine.append("[ ");
+                if(this.items[i][j] != null) {
+                    machine.append(this.items[i][j].getName());
+                }
+                else{
+                    machine.append("x");
+                }
+                machine.append(" ] ");
+            }
+            machine.append(")\n");
+        }
+        return machine.toString();
     }
 
 }
